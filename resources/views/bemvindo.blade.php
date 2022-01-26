@@ -8,5 +8,9 @@
 </head>
 <body>
     <h1>Bem Vindo, {{$apelido}}</h1>
+    <p>1 + 1 = {{ 1+1 }}</p>
+    <p>Função = {{-- funcao() --}}</p>
+    <p>Codigo html: {{$html}}</p>
+    <p>Codigo html interpletado: {!! $html !!}</p>
 </body>
 </html>

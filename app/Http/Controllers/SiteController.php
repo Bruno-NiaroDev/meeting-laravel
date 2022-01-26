@@ -11,7 +11,12 @@ class SiteController extends Controller
         // Aqui eu poderia criar uma logica
         // Verificar se um usuário existe
         // Buscar dados, etc..
-        return view('bemvindo');
+        $nome = 'Brunin';
+        $idade = 90;
+        return view('bemvindo', [
+            'apelido_nome' => $nome,
+            'idade' => $idade
+        ]);
     }
 
     public function logout(){

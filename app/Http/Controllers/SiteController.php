@@ -34,5 +34,12 @@ class SiteController extends Controller
         return view('bemvindo', $dados);
     }
 
+    public function exercicio2() {
+
+        $dados['url'] = 'https://i.pravatar.cc/150?img=';
+
+        return view('exercicio', $dados);
+    }
+
 }
 

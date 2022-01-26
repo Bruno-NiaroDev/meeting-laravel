@@ -19,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [SiteController::class, 'index']);
+
+Route::get('/exercicio', [SiteController::class, 'exercicio2']);

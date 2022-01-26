@@ -10,7 +10,12 @@ class SiteController extends Controller
     public function index(){
         $data = [
             'apelido' => 'Brunin',
-            'tipoUser' => 'admin'
+            'ingredientes' => [
+                'farinha',
+                'ovos',
+                'farinha',
+                'ovos'
+            ]
         ];
         return view('bemvindo', $data);
     }

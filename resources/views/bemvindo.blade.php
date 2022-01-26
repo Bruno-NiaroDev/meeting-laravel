@@ -8,16 +8,14 @@
 </head>
 <body>
     <h1>Bem Vindo, {{$apelido}}</h1>
-    <p>Tipo (Ternário): {{ $tipoUser == 'admin' ? 'Administrador' : 'Usuário'}}</p>
-    <p>Tipo (Comum):
-        @if($tipoUser == 'admin')
-            <b>Administrador</b>
-        @elseif ($tipoUser == 'simple')
-            <b>Usuário</b>
-        @else
-            <b>Visistante</b>
-        @endif
-    </p>
+    <h3>Ingredientes</h3>
+    @for ($i=0;$i < count($ingredientes); $i++)
+        <p>{{$ingredientes[$i]}}</p>
+    @endfor
+    <h3>Ingredientes (forech)</h3>
+    @foreach ($ingredientes as $ingrediente)
+        <p>{{$ingrediente}}</p>
+    @endforeach
 
 </body>
 </html>

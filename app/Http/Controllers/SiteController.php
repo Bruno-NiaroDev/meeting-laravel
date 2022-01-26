@@ -10,7 +10,7 @@ class SiteController extends Controller
     public function index(){
         $data = [
             'apelido' => 'Brunin',
-            'html' => '<b style="color: red">Negrito</b>',
+            'tipoUser' => 'admin'
         ];
         return view('bemvindo', $data);
     }

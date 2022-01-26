@@ -8,9 +8,16 @@
 </head>
 <body>
     <h1>Bem Vindo, {{$apelido}}</h1>
-    <p>1 + 1 = {{ 1+1 }}</p>
-    <p>Função = {{-- funcao() --}}</p>
-    <p>Codigo html: {{$html}}</p>
-    <p>Codigo html interpletado: {!! $html !!}</p>
+    <p>Tipo (Ternário): {{ $tipoUser == 'admin' ? 'Administrador' : 'Usuário'}}</p>
+    <p>Tipo (Comum):
+        @if($tipoUser == 'admin')
+            <b>Administrador</b>
+        @elseif ($tipoUser == 'simple')
+            <b>Usuário</b>
+        @else
+            <b>Visistante</b>
+        @endif
+    </p>
+
 </body>
 </html>

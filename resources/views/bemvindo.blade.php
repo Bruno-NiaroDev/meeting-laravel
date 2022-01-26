@@ -7,7 +7,11 @@
     <title>Bem Vindo</title>
 </head>
 <body>
-    <h1>Bem Vindo, {{$apelido_nome}}</h1>
-    <h2>Idade: {{$idade}}</h2>
+    <h1>Bem Vindo, {{$nome}}</h1>
+    <tr></tr>
+    <p>Nome Completo: {{$nome}} {{$sobrenome}}</p>
+    <p>Idade: {{$idade}}</p>
+    <p>Apelido: {{$apelido}}</p>
+    <p>Signo: {{$signo}}</p>
 </body>
 </html>

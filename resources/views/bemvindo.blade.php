@@ -7,25 +7,26 @@
     <title>Bem Vindo</title>
 </head>
 <body>
-    <h1>Bem Vindo, {{$apelido}}</h1>
-    <h3>Ingredientes</h3>
-    @foreach ($ingredientes as $ingrediente)
-        <p>
-            {{$ingrediente}} -
-            @component('components.botao')
-                @slot('cor')
-                    blue
+    <h1>Bem Vindo, Brunin</h1>
+    <h3>Listagem da galera</h3>
+
+        @foreach ($pessoas as $pessoa)
+            @component('components.card')
+                @slot('caminhoImagem')
+                    {{$pessoa['image']}}
                 @endslot
-                Editar
-            @endcomponent
-            @component('components.botao')
-                @slot('cor')
-                    red
+                @slot('nome')
+                    {{$pessoa['nome']}}
                 @endslot
-                Deletar
+                @slot('idade')
+                    {{$pessoa['idade']}}
+                @endslot
+                @slot('dataNasc')
+                    {{$pessoa['birth']}}
+                @endslot
             @endcomponent
-        </p>
-    @endforeach
+        @endforeach
+
 
 </body>
 </html>

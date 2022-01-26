@@ -9,12 +9,22 @@
 <body>
     <h1>Bem Vindo, {{$apelido}}</h1>
     <h3>Ingredientes</h3>
-    @for ($i=0;$i < count($ingredientes); $i++)
-        <p>{{$ingredientes[$i]}}</p>
-    @endfor
-    <h3>Ingredientes (forech)</h3>
     @foreach ($ingredientes as $ingrediente)
-        <p>{{$ingrediente}}</p>
+        <p>
+            {{$ingrediente}} -
+            @component('components.botao')
+                @slot('cor')
+                    blue
+                @endslot
+                Editar
+            @endcomponent
+            @component('components.botao')
+                @slot('cor')
+                    red
+                @endslot
+                Deletar
+            @endcomponent
+        </p>
     @endforeach
 
 </body>

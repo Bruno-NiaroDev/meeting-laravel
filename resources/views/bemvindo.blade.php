@@ -8,7 +8,6 @@
 </head>
 <body>
     <h1>Bem Vindo, {{$nome}}</h1>
-    <tr></tr>
     <p>Nome Completo: {{$nome}} {{$sobrenome}}</p>
     <p>Idade: {{$idade}}</p>
     <p>Apelido: {{$apelido}}</p>

@@ -12,11 +12,7 @@ class SiteController extends Controller
         // Verificar se um usuário existe
         // Buscar dados, etc..
         $data = [
-            'nome' => 'Brunin',
-            'sobrenome' => 'Araujo',
-            'idade' => 22,
             'apelido' => 'Brunin',
-            'signo' => 'Gemeos'
         ];
         return view('bemvindo', $data);
     }
@@ -24,6 +20,13 @@ class SiteController extends Controller
     public function logout(){
 
         return view('exit');
+    }
+
+    public function users(Request $r){
+        $data = [
+            'quantidade' => $r->qnt
+        ];
+        return view('usuarios', $data);
     }
 }
 

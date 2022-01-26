@@ -10,22 +10,22 @@
     <h1>Bem Vindo, Brunin</h1>
     <h3>Listagem da galera</h3>
 
-        @foreach ($pessoas as $pessoa)
-            @component('components.card')
-                @slot('caminhoImagem')
-                    {{$pessoa['image']}}
-                @endslot
-                @slot('nome')
-                    {{$pessoa['nome']}}
-                @endslot
-                @slot('idade')
-                    {{$pessoa['idade']}}
-                @endslot
-                @slot('dataNasc')
-                    {{$pessoa['birth']}}
-                @endslot
-            @endcomponent
-        @endforeach
+    @foreach ($pessoas as $pessoa)
+        @component('components.card')
+            @slot('caminhoImagem')
+                {{$pessoa['image']}}
+            @endslot
+            @slot('nome')
+                {{$pessoa['nome']}}
+            @endslot
+            @slot('idade')
+                {{$pessoa['idade']}}
+            @endslot
+            @slot('dataNasc')
+                {{$pessoa['birth']}}
+            @endslot
+        @endcomponent
+    @endforeach
 
 
 </body>

@@ -7,13 +7,12 @@
     <title>Exercicio - 2</title>
 </head>
 <body>
-    @for ($i = 1; $i < 50 ; $i++)
-    @component('components.imagem')
-        @slot('url')
-            {{$url.$i}}
-        @endslot
-    @endcomponent
+    @for ($i = 0; $i < 50 ; $i++)
+        @component('components.imagem')
+            @slot('url')
+                {{$url.$i}}
+            @endslot
+        @endcomponent
     @endfor
-
 </body>
 </html>
